@@ -1,0 +1,23 @@
+{
+  "name": "lite-se",
+  "version": "1.0.0",
+  "description": "Hexo Theme Dev Server",
+  "main": "index.js",
+  "author": "HeskeyBaozi",
+  "license": "MIT",
+  "hexo": {
+    "version": "3.4.3"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "hexo": "^3.4.3",
+    "hexo-pagination": "^0.1.0",
+    "hexo-renderer-ejs": "^0.3.0",
+    "hexo-renderer-stylus": "^0.3.1",
+    "hexo-renderer-marked": "^0.3.0",
+    "koa": "^2.4.1",
+    "koa-static": "^4.0.2"
+  }
+}
