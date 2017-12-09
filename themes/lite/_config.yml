@@ -1,0 +1,51 @@
+# -------------------------------------------------------
+# Custom Pictures
+# -------------------------------------------------------
+
+avatar:
+  enable: true
+  url: /static/images/6828af33.jpg
+
+background_picture:
+  url: /static/images/miku.jpg
+  
+
+# -------------------------------------------------------
+# Menu
+# -------------------------------------------------------
+
+menu:
+  home: /home
+  archives: /archives
+  categories: /categories
+  tags: /tags
+
+menu_icons:
+  enable: true
+  home: fa-home
+  archives: fa-archive
+  categories: fa-bookmark
+  tags: fa-slack
+
+# -------------------------------------------------------
+# Social
+# -------------------------------------------------------
+
+social:
+  github: https://github.com/heskeybaozi
+  weibo: http://weibo.com/52hezhiyu
+  email: hezhiyu233@foxmail.com
+
+
+social_icons:
+  enable: true
+  github: fa-github-alt
+  weibo: fa-weibo
+  email: fa-envelope
+  wechat: fa-weixin
+  qq: fa-qq
+
+# -------------------------------------------------------
+# Powered by
+# -------------------------------------------------------
+powered_by: Hexo Theme Lite

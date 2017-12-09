@@ -12,12 +12,14 @@
     "start": "node ./index.js"
   },
   "dependencies": {
+    "@koa/cors": "2",
     "hexo": "^3.4.3",
     "hexo-pagination": "^0.1.0",
     "hexo-renderer-ejs": "^0.3.0",
-    "hexo-renderer-stylus": "^0.3.1",
     "hexo-renderer-marked": "^0.3.0",
+    "hexo-renderer-stylus": "^0.3.1",
     "koa": "^2.4.1",
     "koa-static": "^4.0.2"
-  }
+  },
+  "devDependencies": {}
 }

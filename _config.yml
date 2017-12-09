@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: Hexo2334
+subtitle: subtitle233
+description: discription233
 author: John Doe
 language:
 timezone:
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme:
+theme: lite
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
