@@ -6,8 +6,10 @@ avatar:
   enable: true
   url: /static/images/6828af33.jpg
 
-background_picture:
+background:
   url: /static/images/miku.jpg
+  css_size: cover
+  css_position: 50% -50px
   
 
 # -------------------------------------------------------
