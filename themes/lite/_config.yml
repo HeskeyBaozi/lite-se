@@ -9,7 +9,7 @@ avatar:
 background:
   url: /static/images/miku.jpg
   css_size: cover
-  css_position: 50% -50px
+  css_position: 50%
   
 
 # -------------------------------------------------------
@@ -17,17 +17,18 @@ background:
 # -------------------------------------------------------
 
 menu:
-  home: /home
-  archives: /archives
-  categories: /categories
-  tags: /tags
+  Home: true
+  Archives: true
+  Categories: true
+  Tags: true
+  About: /pages/about
 
 menu_icons:
   enable: true
-  home: fa-home
-  archives: fa-archive
-  categories: fa-bookmark
-  tags: fa-slack
+  Home: fa-home
+  Archives: fa-archive
+  Categories: fa-bookmark
+  Tags: fa-slack
 
 # -------------------------------------------------------
 # Social

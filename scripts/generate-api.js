@@ -34,30 +34,30 @@ function fetchCover(str) {
 function generator(cfg, site) {
 
   let restful = {
-      site: true,
-      posts_size: cfg.per_page || 10,
-      posts_props: {
-        title: true,
-        slug: true,
-        date: true,
-        updated: true,
-        comments: true,
-        cover: true,
-        path: true,
-        photos: true,
-        text: true,
-        raw: false,
-        link: true,
-        excerpt: false,
-        content: false,
-        categories: true,
-        tags: true
-      },
+    site: true,
+    posts_size: cfg.per_page || 10,
+    posts_props: {
+      title: true,
+      slug: true,
+      date: true,
+      updated: true,
+      comments: true,
+      cover: true,
+      path: true,
+      photos: true,
+      text: true,
+      raw: false,
+      link: true,
+      excerpt: false,
+      content: false,
       categories: true,
-      tags: true,
-      post: true,
-      pages: true,
+      tags: true
     },
+    categories: true,
+    tags: true,
+    post: true,
+    pages: true,
+  },
 
     posts = site.posts.sort('-date').filter(function (post) {
       return post.published;
@@ -81,7 +81,7 @@ function generator(cfg, site) {
         path: posts_props('path', 'api/articles/' + post.slug + '.json'),
         excerpt: posts_props('excerpt', filterHTMLTags(post.excerpt)),
         keywords: posts_props('keywords', cfg.keywords),
-        cover: posts_props('cover', fetchCover(post.content)),
+        cover: posts_props('cover', post.cover || fetchCover(post.content)),
         content: posts_props('content', post.content),
         text: posts_props('text', filterHTMLTags(post.content).substring(0, 140)),
         link: posts_props('link', post.link),
@@ -254,8 +254,9 @@ function generator(cfg, site) {
   if (restful.pages) {
     apiData = apiData.concat(site.pages.data.map(function (page) {
       const safe_title = page.title.replace(/[^a-z0-9]/gi, '-').toLowerCase();
-      const path = 'api/pages/' + safe_title + '.json';
-
+      const sourceMappedPath = page.source.replace(/\.md$/, '.json');
+      const path = 'api/pages/' + sourceMappedPath;
+      const covers = fetchCovers(page.content);
       return {
         path: path,
         data: JSON.stringify({
