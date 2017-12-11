@@ -21,7 +21,7 @@ menu:
   Archives: true
   Categories: true
   Tags: true
-  About: /pages/about
+  About: /pages/about/index
 
 menu_icons:
   enable: true
@@ -29,6 +29,7 @@ menu_icons:
   Archives: fa-archive
   Categories: fa-bookmark
   Tags: fa-slack
+  About: fa-smile-o
 
 # -------------------------------------------------------
 # Social
