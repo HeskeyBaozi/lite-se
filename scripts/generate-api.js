@@ -35,7 +35,7 @@ function generator(cfg, site) {
 
   let restful = {
     site: true,
-    posts_size: cfg.per_page || 10,
+    posts_size: cfg.per_page,
     posts_props: {
       title: true,
       slug: true,
@@ -211,8 +211,13 @@ function generator(cfg, site) {
   } else {
 
     apiData.push({
-      path: 'api/posts.json',
-      data: JSON.stringify(postlist)
+      path: 'api/posts/1.json',
+      data: JSON.stringify({
+        total: postlist.length,
+        pageSize: postlist.length,
+        pageCount: 1,
+        data: postlist
+      })
     });
   }
 
