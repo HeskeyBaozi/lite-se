@@ -91,7 +91,9 @@ function generator(cfg, site) {
           return post.categories.map(function (cat) {
             return {
               name: cat.name,
-              path: 'api/categories/' + cat.name + '.json'
+              slug: cat.slug,
+              count: cat.posts.length,
+              path: 'api/categories/' + cat.slug + '.json'
             };
           });
         }),
@@ -99,7 +101,9 @@ function generator(cfg, site) {
           return post.tags.map(function (tag) {
             return {
               name: tag.name,
-              path: 'api/tags/' + tag.name + '.json'
+              slug: tag.slug,
+              count: tag.posts.length,
+              path: 'api/tags/' + tag.slug + '.json'
             };
           });
         })
@@ -114,7 +118,9 @@ function generator(cfg, site) {
           perPage: 0,
           data: {
             name: item.name,
-            path: 'api/' + name + '/' + item.name + '.json',
+            slug: item.slug,
+            count: item.posts.length,
+            path: 'api/' + name + '/' + item.slug + '.json',
             postlist: item.posts.map(postMap)
           }
 
@@ -126,7 +132,8 @@ function generator(cfg, site) {
       return {
         name: item.data.name,
         path: item.data.path,
-        count: item.data.postlist.length
+        slug: item.data.slug,
+        count: item.data.count
       };
     },
 
@@ -136,6 +143,8 @@ function generator(cfg, site) {
         path: itemData.path,
         data: JSON.stringify({
           name: itemData.name,
+          slug: itemData.slug,
+          count: itemData.count,
           postlist: itemData.postlist
         })
       };
@@ -152,8 +161,9 @@ function generator(cfg, site) {
   }
 
   if (restful.categories) {
+    const categories = site.categories;
 
-    const cates = cateReduce(site.categories, 'categories');
+    const cates = cateReduce(categories, 'categories');
 
     if (!!cates.length) {
       apiData.push({
@@ -161,7 +171,8 @@ function generator(cfg, site) {
         data: JSON.stringify(cates.map(catesMap))
       });
 
-      apiData = apiData.concat(cates.map(cateMap));
+      const catesMaps = cates.map(cateMap);
+      apiData = apiData.concat(catesMaps);
     }
 
   }
@@ -242,13 +253,17 @@ function generator(cfg, site) {
           categories: post.categories.map(function (cat) {
             return {
               name: cat.name,
-              path: 'api/categories/' + cat.name + '.json'
+              slug: cat.slug,
+              count: cat.posts.length,
+              path: 'api/categories/' + cat.slug + '.json'
             };
           }),
           tags: post.tags.map(function (tag) {
             return {
               name: tag.name,
-              path: 'api/tags/' + tag.name + '.json'
+              slug: tag.slug,
+              count: tag.posts.length,
+              path: 'api/tags/' + tag.slug + '.json'
             };
           })
         })

@@ -21,7 +21,7 @@ menu:
   Archives: true
   Categories: true
   Tags: true
-  About: /pages/about/index
+  About: /about/index
 
 menu_icons:
   enable: true
