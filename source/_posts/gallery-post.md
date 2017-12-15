@@ -5,6 +5,9 @@ photos:
 - /assets/wallpaper-2311325.jpg
 - /assets/wallpaper-878514.jpg
 - http://placehold.it/350x150.jpg
+tags:
+- Foo
+- Baz
 ---
 
 This post contains 4 photos:
