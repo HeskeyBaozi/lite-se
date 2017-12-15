@@ -4,7 +4,7 @@
 
 avatar:
   enable: true
-  url: /static/images/6828af33.jpg
+  url: /static/images/kamuyi.jpg
 
 background:
   url: /static/images/miku.jpg
@@ -75,7 +75,7 @@ page_404:
   # [O]  source_path: 404/index.md
   # [O]  source_path: 404/index
   # [O]  source_path: 404                   ('/index' can be omitted)
-  source_path: 404/index
+  source_path: 404/index.md
 
 # -------------------------------------------------------
 # Powered by
