@@ -1,0 +1,24 @@
+var Counter = (function() {
+    var privateCounter = 0;
+    function changeBy(val) {
+        privateCounter += val;
+    }
+    return {
+        increment: function(dis) {
+            changeBy(dis);
+        },
+        decrement: function(dis) {
+            changeBy(-dis);
+        },
+        value: function() {
+            return privateCounter;
+        }
+    }
+})();
+
+console.log(Counter.value()); // 0
+Counter.increment(1);
+Counter.increment(2);
+console.log(Counter.value()); // 6
+Counter.decrement(5);
+console.log(Counter.value()); // 3
