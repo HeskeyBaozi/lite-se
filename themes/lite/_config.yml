@@ -7,9 +7,28 @@ avatar:
   url: /static/images/kamuyi.jpg
 
 background:
+  background_color: white
+
+  enable_picture: true
   url: /static/images/miku.jpg
   css_size: cover
   css_position: 50%
+
+# -------------------------------------------------------
+# Custom Blur
+# -------------------------------------------------------
+blur:
+  background_color: white
+
+  hide_overflow: true
+
+  gaussian_radius:
+    top_navigator: 30
+    header: 40
+    footer: 40
+  
+  font:
+    color: white
   
 
 # -------------------------------------------------------
@@ -76,6 +95,29 @@ page_404:
   # [O]  source_path: 404/index
   # [O]  source_path: 404                   ('/index' can be omitted)
   source_path: 404/index.md
+
+# -------------------------------------------------------
+# Comments System
+# -------------------------------------------------------
+
+# https://github.com/imsun/gitment#customize
+gitment:
+  enable: true
+  github_id: HeskeyBaozi
+  repository_name: blog-comments
+  client_id: ad644ccf919a7545ebbd
+  client_secret: 884e508e709165f838fe4f58d4af050970b88216
+  per_page: 8
+  max_comment_height: 250 # 250px
+
+# -------------------------------------------------------
+# Google Analytics
+# -------------------------------------------------------
+
+google_analytics:
+  enable: true
+  track_id: UA-111467225-1 # start with 'UA-', such as 'UA-XXXXX-X'
+
 
 # -------------------------------------------------------
 # Powered by
