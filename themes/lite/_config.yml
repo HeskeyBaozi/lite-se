@@ -7,18 +7,28 @@ avatar:
   url: /static/images/kamuyi.jpg
 
 background:
-  background_color: white
+  background_color: lightblue
 
-  enable_picture: true
+  # Custom Background Picture
+  enable_picture: false
   url: /static/images/miku.jpg
   css_size: cover
   css_position: 50%
+  
+  # Gradient color
+  gradient_color:
+    enable: true
+    css_value: 'linear-gradient(to right, rgb(74, 135, 193), rgb(179, 177, 251))'
 
 # -------------------------------------------------------
 # Custom Blur
 # -------------------------------------------------------
 blur:
   background_color: white
+
+  opacity:
+    enable: true
+    opacity_value: 0.4
 
   hide_overflow: true
 

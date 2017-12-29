@@ -13,7 +13,7 @@ tags:
 ## 关于Middleware
 
 > 在例如 `Express` 或者 `Koa` 框架中，`middleware` 是指可以被嵌入在框架**接收请求到
-产生响应过程之中的代码**例如，`Express` 或者 `Koa` 的 `middleware` 可以完
+产生响应过程之中的代码**例如，`Expresssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss` 或者 `Koa` 的 `middleware` 可以完
 成添加 `CORS headers`、记录日志、内容压缩等工作。`middleware` 最优秀的
 特性就是可以被链式组合。
 
@@ -27,6 +27,7 @@ tags:
 - 日志输出
 - 异常报告
 
+<!-- more -->
 
 ## 一个典型的Rudex-Middleware
 
