@@ -4,42 +4,22 @@
 
 avatar:
   enable: true
-  url: /static/images/kamuyi.jpg
+  url: /assets/heart.jpg
 
 background:
-  background_color: lightblue
+  background_color: '#ffffff'
 
   # Custom Background Picture
-  enable_picture: false
+  enable_picture: true
   url: /static/images/miku.jpg
   css_size: cover
   css_position: 50%
-  
+
   # Gradient color
   gradient_color:
-    enable: true
+    enable: false # switch to 'true' will make custom background picture lose efficacy
     css_value: 'linear-gradient(to right, rgb(74, 135, 193), rgb(179, 177, 251))'
 
-# -------------------------------------------------------
-# Custom Blur
-# -------------------------------------------------------
-blur:
-  background_color: white
-
-  opacity:
-    enable: true
-    opacity_value: 0.4
-
-  hide_overflow: true
-
-  gaussian_radius:
-    top_navigator: 30
-    header: 40
-    footer: 40
-  
-  font:
-    color: white
-  
 
 # -------------------------------------------------------
 # Menu
@@ -59,7 +39,7 @@ menu:
   # [X]  About: /about/index       (need '/pages' as prefix)
   # [O]  About: /pages/about/index (preferred)
   # [O]  About: /pages/about
-  About: /pages/about/index
+  # About: /pages/about/index
 
 menu_icons:
   enable: true
@@ -69,6 +49,33 @@ menu_icons:
   Categories: fa-bookmark
   Tags: fa-hashtag
   About: fa-smile-o
+
+# -------------------------------------------------------
+# Custom Blur
+# -------------------------------------------------------
+blur:
+  background_color: '#ffffff'
+
+  hide_overflow: true
+
+  # Alpha Value of the background color
+  opacity:
+    enable: false # switch to 'true' will make the gaussian blur lose efficacy
+    opacity_value: 0.4
+
+  gaussian_radius:
+    top_navigator: 50 # 40px+ preferred
+    header: 30 # 5 ~ 50px preferred
+    footer: 40 # 5 ~ 100px preferred
+
+  font:
+    color: '#ffffff' # only affect the font color in the blur area.
+
+# -------------------------------------------------------
+# Layout
+# -------------------------------------------------------
+theme_layout:
+  dependent_footer: true
 
 # -------------------------------------------------------
 # Social
@@ -96,7 +103,7 @@ social_icons:
 # -------------------------------------------------------
 page_404:
   # enable to use custom 404 page
-  enable: true
+  enable: false
   # filename of .md file path in your source dir
   # example:
   # after run command `hexo new page 404`
@@ -112,24 +119,30 @@ page_404:
 
 # https://github.com/imsun/gitment#customize
 gitment:
-  enable: true
-  github_id: HeskeyBaozi
-  repository_name: blog-comments
-  client_id: ad644ccf919a7545ebbd
-  client_secret: 884e508e709165f838fe4f58d4af050970b88216
-  per_page: 8
-  max_comment_height: 250 # 250px
+  enable: false
+  github_id: # your github id
+  repository_name: # your repository name
+
+  # client_id & secret will generated after register an OAuth App
+  # reference: https://github.com/settings/applications/new
+  client_id:
+  client_secret:
+  per_page: 8 # comments per page
+  max_comment_height: 250 # default 250px
 
 # -------------------------------------------------------
 # Google Analytics
 # -------------------------------------------------------
 
 google_analytics:
-  enable: true
-  track_id: UA-111467225-1 # start with 'UA-', such as 'UA-XXXXX-X'
+  enable: false
+  track_id: UA-XXXXXX-X # replace to your track_id. It starts with 'UA-'.
 
 
 # -------------------------------------------------------
 # Powered by
 # -------------------------------------------------------
-powered_by: Hexo Theme Lite
+# if you want to disable powered-by
+# powered_by: false
+# powered_by: ''
+powered_by: Daddy
